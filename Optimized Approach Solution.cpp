@@ -5,11 +5,13 @@
 
 // Input :
 // n=5 
-// cables = [[0,1],[1,2],[2,3],[2,4],[5,6],[5,7]]
+//noOfCables=6  // For Our Example Case taking Cables vector of 6 length
+// cables = [[0,1],[0,3],[1,2],[1,3],[2,3],[2,4]]
 
 
 //OutPut:
-// maximal network rank of the entire infrastructure = 5
+// Maximal network rank is : 5
+
 
 
 // CODE 
@@ -60,17 +62,23 @@ int maxNetworkRank(int n,vector<vector<int>>&cables)
 
 int main()
 {
+    cout<<"Enter the no vertices n : ";
     int n;
     cin>>n;
+    cout<<"Enter the no of Cables : ";
+    int noOfCables;
+    cin>>noOfCables;
     vector<vector<int>>cables;   //creating a 2D Vector for cables where Each cable[i] = [ai, bi] indicates that there is a bidirectional cable between labs ai and bi
-    for(int i=0;i<6;i++)       // considering Our Input Example cables of length 6.
+    for(int i=0;i<noOfCables;i++)       // considering Our Input Example cables of length 6.
     {
         int x,y;
+        cin>>x>>y;
         cables.push_back({x,y});
     }
     
     int ans= maxNetworkRank(n,cables);
-    cout<<ans;
+    
+    cout<<"The Maximal Network Rank is : "<<ans << endl;
     
     return 0;
 }
