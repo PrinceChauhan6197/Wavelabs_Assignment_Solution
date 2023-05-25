@@ -9,7 +9,7 @@
 
 
 //OutPut:
-// maximal network rank of the entire infrastructure = 5
+// The Maximal network rank is  : 5
 
 
 
